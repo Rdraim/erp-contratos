@@ -8,7 +8,9 @@
 
 ![erp-contratos](assets/support/project-pt-br.svg)
 
-[![MIT](https://img.shields.io/github/license/Rdraim/erp-contratos?style=flat)](LICENSE) [![CI](https://img.shields.io/github/actions/workflow/status/Rdraim/erp-contratos/ci.yml?branch=main&label=CI&style=flat)](https://github.com/Rdraim/erp-contratos/actions) [![Release](https://img.shields.io/github/v/release/Rdraim/erp-contratos?style=flat)](https://github.com/Rdraim/erp-contratos/releases) [![Git](https://img.shields.io/github/last-commit/Rdraim/erp-contratos?label=Git&style=flat)](https://github.com/Rdraim/erp-contratos/commits/main) [![Stars](https://img.shields.io/github/stars/Rdraim/erp-contratos?style=social)](https://github.com/Rdraim/erp-contratos/stargazers) [![Forks](https://img.shields.io/github/forks/Rdraim/erp-contratos?style=social)](https://github.com/Rdraim/erp-contratos/forks)
+<!-- public-badges:start -->
+[![license](assets/support/badge-license.svg)](LICENSE) [![CI](assets/support/badge-ci.svg)](https://github.com/Rdraim/erp-contratos/actions) [![release](assets/support/badge-release.svg)](https://github.com/Rdraim/erp-contratos/releases) [![Git](assets/support/badge-git.svg)](https://github.com/Rdraim/erp-contratos/commits/main)
+<!-- public-badges:end -->
 
 <p>
   <a href="https://github.com/Rdraim/erp-contratos/tree/main/examples"><img src="assets/support/action-0-pt-br.svg" height="40" width="200" alt="Ver exemplos"></a>
