@@ -1,0 +1,7 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {criarExecutor, validarEnvelope} from '../src/index.js';
+test('concurrent duplicates execute once with detached outputs',async()=>{let calls=0;const run=criarExecutor({executar:async()=>({n:++calls})});const e={versao:1,id:'A',tipo:'example',dados:{a:1,b:2}};const [a,b]=await Promise.all([run(e),run({...e,dados:{b:2,a:1}})]);assert.equal(calls,1);a.n=9;assert.equal(b.n,1);});
+test('changed payload and capacity reject explicitly',async()=>{const run=criarExecutor({executar:async()=>true,capacidade:1});const e={versao:1,id:'A',tipo:'x',dados:{v:1}};await run(e);await assert.rejects(run({...e,dados:{v:2}}),/different/);await assert.rejects(run({...e,id:'B'}),RangeError);});
+test('failed attempts can retry and invalid version fails',async()=>{let n=0;const run=criarExecutor({executar:async()=>{if(!n++)throw Error('offline');return true;}});const e={versao:1,id:'A',tipo:'x',dados:{}};await assert.rejects(run(e));assert.equal(await run(e),true);assert.throws(()=>validarEnvelope({...e,versao:2}),TypeError);});
+
+test('cyclic and non-JSON payloads fail before adapter execution',async()=>{let calls=0;const run=criarExecutor({executar:async()=>calls++});const dados={};dados.self=dados;await assert.rejects(run({versao:1,id:'a',tipo:'x',dados}),/Cyclic/);await assert.rejects(run({versao:1,id:'b',tipo:'x',dados:{at:new Date()}}),/JSON/);assert.equal(calls,0);});
