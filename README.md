@@ -9,7 +9,7 @@
 ![erp-contratos](assets/support/project-pt-br.svg)
 
 <!-- public-badges:start -->
-[![license](assets/support/badge-license.svg)](LICENSE) [![CI](assets/support/badge-ci.svg)](https://github.com/Rdraim/erp-contratos/actions) [![release](assets/support/badge-release.svg)](https://github.com/Rdraim/erp-contratos/releases)
+[![license](assets/support/badge-license.svg)](LICENSE) [![CI](assets/support/badge-ci.svg)](https://github.com/Rdraim/erp-contratos/actions) [![release](assets/support/badge-release.svg)](https://github.com/Rdraim/erp-contratos/releases) [![Git](assets/support/badge-git.svg)](https://github.com/Rdraim/erp-contratos/commits/main)
 <!-- public-badges:end -->
 
 <p>
